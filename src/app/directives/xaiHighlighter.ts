@@ -1,10 +1,10 @@
 import {Directive, ElementRef} from '@angular/core';
 
 @Directive({
-    selector: '[highlighter]'
+    selector: '[xaiHighlighter]'
 })
 
-export class Highlighter{
+export class XaiHighlighter{
 
     constructor(private el:ElementRef) {
         el.nativeElement.style.background = 'yellow';

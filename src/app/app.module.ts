@@ -5,12 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { Highlighter} from './directives/highlighter';
+import { XaiHighlighter} from './directives/xaihighlighter';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Highlighter
+    XaiHighlighter
   ],
   imports: [
     BrowserModule,
