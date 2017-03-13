@@ -5,9 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { Highlighter} from './directives/highlighter';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Highlighter
   ],
   imports: [
     BrowserModule,
