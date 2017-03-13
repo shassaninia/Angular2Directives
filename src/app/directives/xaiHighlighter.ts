@@ -13,6 +13,8 @@ export class XaiHighlighter{
     */
     @Input('xaiHighlight') highlightcolor: string;
 
+    @Input() defaultColor:string;
+
     constructor(private el:ElementRef) {  }
 
     /*
@@ -20,7 +22,7 @@ export class XaiHighlighter{
     Then add two eventhandlers that respond when the mouse enters or leaves, each adorned by the HostListener decorator.
     */
     @HostListener('mouseenter') onmouseenter(){
-        this.highlight(this.highlightcolor || 'red');
+        this.highlight(this.highlightcolor || this.defaultColor || 'red');
     }
 
     @HostListener('mouseleave') onmouseleave(){
