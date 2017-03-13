@@ -1,15 +1,17 @@
 import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 
 @Directive({
-    selector: '[xaiHighlighter]'
+    selector: '[xaiHighlight]'
 })
 
 export class XaiHighlighter{
 
     /*
     @Input allows us to pass data into the directive.
+    Set an alias for XaiHighlighter to highlightcolor
+    Inside the directive the property is known as highlightColor. Outside the directive, where you bind to it, it's known as xaiHighlight.
     */
-    @Input() xaiHighlighter: string;
+    @Input('xaiHighlight') highlightcolor: string;
 
     constructor(private el:ElementRef) {  }
 
@@ -18,7 +20,7 @@ export class XaiHighlighter{
     Then add two eventhandlers that respond when the mouse enters or leaves, each adorned by the HostListener decorator.
     */
     @HostListener('mouseenter') onmouseenter(){
-        this.highlight(this.xaiHighlighter);
+        this.highlight(this.highlightcolor || 'red');
     }
 
     @HostListener('mouseleave') onmouseleave(){
