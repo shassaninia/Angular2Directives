@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { XaiHighlighter} from './directives/xaihighlighter';
+import { XaiHighlighter} from './directives/xaiHighlighter';
 
 @NgModule({
   declarations: [
